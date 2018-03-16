@@ -1,7 +1,8 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose'
 let chai = require('chai')
 const expect = chai.expect;
 import schema from '../src/models/UserModel'
+import uuid from 'uuid'
 
 describe('Command Add User', function() {
 
@@ -10,7 +11,7 @@ describe('Command Add User', function() {
     const User = mongoose.model('User', schema)
 
     beforeEach(function (done) {
-      mongoose.connect('mongodb://localhost/imarsh')
+      mongoose.connect('mongodb://localhost/holidayextras')
       const db = mongoose.connection
       db.on('error', console.error.bind(console, 'connection error'))
       db.once('open', function() {
@@ -23,8 +24,10 @@ describe('Command Add User', function() {
       //Save object with 'name' value of 'Mike"
       it('New user saved to test database', function(done) {
         var test = User({
+          id: uuid(),
           email: 'jon.bloggs@domain.com',
-          password: 'password'
+          forename: 'jon',
+          surname: 'bloggs'
         });
         test.save()
         done()

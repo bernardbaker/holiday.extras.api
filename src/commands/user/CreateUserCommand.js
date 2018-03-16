@@ -6,7 +6,7 @@ export const createUserCommand = (payload) => {
   return new Promise((resolve, reject) => {
     if (payload === null) reject(400)
     const Schema = mongoose.model('User', schema)
-    Schema.findOne({ 'guid': payload.guid }, (error, retrievedEntry) => {
+    Schema.findOne({ 'id': payload.id }, (error, retrievedEntry) => {
       if (error) {
         console.log(error)
         reject(500)

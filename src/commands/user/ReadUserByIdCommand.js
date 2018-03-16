@@ -4,7 +4,7 @@ import schema from '../../models/UserModel'
 export const readUserByIdCommand = (payload) => {
   return new Promise((resolve, reject) => {
     const Schema = mongoose.model('User', schema)
-    Schema.findOne({ 'guid': payload.guid }, (error, retrievedEntry) => {
+    Schema.findOne({ 'id': payload.id }, (error, retrievedEntry) => {
       if (error) {
         console.log(error)
         reject(500)
