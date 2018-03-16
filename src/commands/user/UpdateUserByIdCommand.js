@@ -4,20 +4,30 @@ import schema from '../../models/UserModel'
 export const updateUserByIdCommand = (payload) => {
   return new Promise((resolve, reject) => {
     const Schema = mongoose.model('User', schema)
-    Schema.findOne({ 'email': payload.email }, (error, retrievedEntry) => {
+    Schema.findOne({ 'guid': payload.guid }, (error, retrievedEntry) => {
       if (error) {
-        reject(error)
+        console.log(error)
+        reject(500)
       }
-      if (retrievedEntry === null) {
-        let entry = new Schema(payload)
-        entry.save((error, newEntry) => {
+      if (retrievedEntry !== null) {
+        if(payload.forename) {
+          retrievedEntry.forename = payload.forename
+        }
+        if(payload.surname) {
+          retrievedEntry.surname = payload.surname
+        }
+        if(payload.email) {
+          retrievedEntry.email = payload.email
+        }
+        retrievedEntry.save((error, newEntry) => {
           if (error) {
-            reject(error)
+            console.log(error)
+            reject(500)
           }
           resolve(newEntry)
         })
       } else {
-        reject(new Error('aready in the db'))
+        reject(400)
       }
     })
   })

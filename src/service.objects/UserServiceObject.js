@@ -24,7 +24,7 @@ export const createNewUser = (payload) => createUserCommand(sanitizationChecksOf
     return result
   })
   .catch(e => {
-    return e
+    throw e
   })
 
 export const readUserById = (payload) => readUserByIdCommand(sanitizationChecksOfInputs(payload))
@@ -32,7 +32,7 @@ export const readUserById = (payload) => readUserByIdCommand(sanitizationChecksO
     return result
   })
   .catch(e => {
-    return e
+    throw e
   })
 
 export const updateUserById = (payload) => updateUserByIdCommand(sanitizationChecksOfInputs(payload))
@@ -40,7 +40,7 @@ export const updateUserById = (payload) => updateUserByIdCommand(sanitizationChe
     return result
   })
   .catch(e => {
-    return e
+    throw e
   })
 
 
@@ -49,5 +49,5 @@ export const deleteUserById = (payload) => deleteUserByIdCommand(sanitizationChe
     return result
   })
   .catch(e => {
-    return e
+    throw e
   })

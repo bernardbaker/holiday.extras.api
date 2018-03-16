@@ -7,15 +7,15 @@ router.post('/create', (req, res) => {
   createUser(req, res)
 })
 
-router.post('/read/:id', (req, res) => {
+router.post('/read', (req, res) => {
   readUser(req, res)
 })
 
-router.post('/update', (req, res) => {
+router.patch('/update', (req, res) => {
   updateUser(req, res)
 })
 
-router.post('/delete', (req, res) => {
+router.delete('/delete', (req, res) => {
   deleteUser(req, res)
 })
 
