@@ -1,0 +1,1 @@
+"C:\Program Files\MongoDB\Server\3.6\scripts\stop-mongodb-service.bat"
