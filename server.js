@@ -4,13 +4,13 @@ import bodyParser from 'body-parser'
 import database from './src/util/db'
 import cors  from 'cors'
 import http from 'http'
- 
+
 const app = express()
 const PORT = process.env.PORT || 3000
 
 app.use(cors())
-app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }))
-app.use(bodyParser.json({ limit: '50mb' }));
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json());
  
 routes(app)
  
