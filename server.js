@@ -16,8 +16,8 @@ routes(app)
  
 const server = http.createServer(app).listen(PORT, () => {
   // Utility service discovery
-  const os = require('os');
-  const ifaces = os.networkInterfaces();
+  const os = require('os')
+  const ifaces = os.networkInterfaces()
 
   Object.keys(ifaces).forEach(function (ifname) {
     let alias = 0
@@ -25,19 +25,16 @@ const server = http.createServer(app).listen(PORT, () => {
     ifaces[ifname].forEach(function (iface) {
       if ('IPv4' !== iface.family || iface.internal !== false) {
         // skip over internal (i.e. 127.0.0.1) and non-ipv4 addresses
-        return;
+        return
       }
-
       if (alias >= 1) {
         // this single interface has multiple ipv4 addresses
-        console.log(ifname + ':' + alias, iface.address);
+        console.log(ifname + ':' + alias, iface.address)
       } else {
         // this interface has only one ipv4 adress
-        console.log('server running at', ifname, iface.address, PORT);
+        console.log('server running at', ifname, iface.address, PORT)
       }
-      ++alias;
-    });
-  });
-
-});
-  
+      ++alias
+    })
+  })
+})
