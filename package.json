@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --compilers js:babel-register",
+    "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha compiled/src --include-all-sources --recursive -- -u exports -R spec && explorer coverage/lcov-report/index.html",
     "start": "node dist/server.js",
     "start-mac": "npm run start-db-mac && nodemon ./server.js --exec babel-node --presets babel-preset-env",
     "start-win": "SET NODE_ENV=development&& npm run start-db-win && nodemon ./server.js --exec babel-node --presets babel-preset-env",
@@ -12,7 +13,8 @@
     "stop-db-mac": "brew services stop mongodb",
     "start-db-win": "start-mongodb.bat",
     "stop-db-win": "stop-mongodb.bat",
-    "build": "babel src --out-dir dist/src && babel server.js --out-file dist/server.js"
+    "build": "babel src --out-dir dist/src && babel server.js --out-file dist/server.js",
+    "build-tests": "babel test --out-dir compiled/src"
   },
   "repository": {
     "type": "git",

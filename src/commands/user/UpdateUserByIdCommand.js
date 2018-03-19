@@ -3,6 +3,7 @@ import schema from '../../models/UserModel'
 
 export const updateUserByIdCommand = (payload) => {
   return new Promise((resolve, reject) => {
+    if (payload === null) reject(400)
     const Schema = mongoose.model('User', schema)
     Schema.findOne({ 'id': payload.id }, (error, retrievedEntry) => {
       if (error) {

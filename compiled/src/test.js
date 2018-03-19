@@ -43,3 +43,4 @@ describe('Command Add User', function() {
   })
 })
 */
+"use strict";
