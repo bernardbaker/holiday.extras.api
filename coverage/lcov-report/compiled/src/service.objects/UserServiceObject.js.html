@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for compiled\src\service.objects\UserServiceObject.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">compiled/src/service.objects/</a> UserServiceObject.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">25% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>11/44</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">25% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>11/44</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.deleteUserById = exports.updateUserById = exports.readUserById = exports.createNewUser = undefined;
+&nbsp;
+var _CreateUserCommand = require('../commands/user/CreateUserCommand');
+&nbsp;
+var _ReadUserByIdCommand = require('../commands/user/ReadUserByIdCommand');
+&nbsp;
+var _UpdateUserByIdCommand = require('../commands/user/UpdateUserByIdCommand');
+&nbsp;
+var _DeleteUserByIdCommand = require('../commands/user/DeleteUserByIdCommand');
+&nbsp;
+var sanitizationChecksOfInputs = <span class="fstat-no" title="function not covered" >function sanitizationChecksOfInputs(values) {</span>
+<span class="cstat-no" title="statement not covered" >  if (values.id) {</span>
+<span class="cstat-no" title="statement not covered" >    var re = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;</span>
+<span class="cstat-no" title="statement not covered" >    var validId = re.test(String(values.id));</span>
+<span class="cstat-no" title="statement not covered" >    if (!validId) {</span>
+<span class="cstat-no" title="statement not covered" >      return null;</span>
+    }
+  }
+<span class="cstat-no" title="statement not covered" >  if (values.email) {</span>
+<span class="cstat-no" title="statement not covered" >    var _re = /^(([^&lt;&gt;()\[\]\\.,;:\s@"]+(\.[^&lt;&gt;()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;</span>
+<span class="cstat-no" title="statement not covered" >    var validEmail = _re.test(String(values.email).toLowerCase());</span>
+<span class="cstat-no" title="statement not covered" >    if (!validEmail) {</span>
+<span class="cstat-no" title="statement not covered" >      return null;</span>
+    }
+  }
+<span class="cstat-no" title="statement not covered" >  if (values.forename) {</span>
+<span class="cstat-no" title="statement not covered" >    var _re2 = /[a-zA-Z ]/;</span>
+<span class="cstat-no" title="statement not covered" >    var validForename = _re2.test(String(values.forename).toLowerCase());</span>
+<span class="cstat-no" title="statement not covered" >    if (!validForename) {</span>
+<span class="cstat-no" title="statement not covered" >      return null;</span>
+    }
+  }
+<span class="cstat-no" title="statement not covered" >  if (values.surname) {</span>
+<span class="cstat-no" title="statement not covered" >    var _re3 = /[a-zA-Z \']/;</span>
+<span class="cstat-no" title="statement not covered" >    var validSurname = _re3.test(String(values.surname).toLowerCase());</span>
+<span class="cstat-no" title="statement not covered" >    if (!validSurname) {</span>
+<span class="cstat-no" title="statement not covered" >      return null;</span>
+    }
+  }
+<span class="cstat-no" title="statement not covered" >  return values;</span>
+};
+&nbsp;
+var createNewUser = exports.createNewUser = <span class="fstat-no" title="function not covered" >function createNewUser(payload) {</span>
+<span class="cstat-no" title="statement not covered" >  return (0, _CreateUserCommand.createUserCommand)(sanitizationChecksOfInputs(payload)).then(<span class="fstat-no" title="function not covered" >function (result) {</span></span>
+<span class="cstat-no" title="statement not covered" >    return result;</span>
+  }).catch(<span class="fstat-no" title="function not covered" >function (e) {</span>
+<span class="cstat-no" title="statement not covered" >    throw e;</span>
+  });
+};
+&nbsp;
+var readUserById = exports.readUserById = <span class="fstat-no" title="function not covered" >function readUserById(payload) {</span>
+<span class="cstat-no" title="statement not covered" >  return (0, _ReadUserByIdCommand.readUserByIdCommand)(sanitizationChecksOfInputs(payload)).then(<span class="fstat-no" title="function not covered" >function (result) {</span></span>
+<span class="cstat-no" title="statement not covered" >    return result;</span>
+  }).catch(<span class="fstat-no" title="function not covered" >function (e) {</span>
+<span class="cstat-no" title="statement not covered" >    throw e;</span>
+  });
+};
+&nbsp;
+var updateUserById = exports.updateUserById = <span class="fstat-no" title="function not covered" >function updateUserById(payload) {</span>
+<span class="cstat-no" title="statement not covered" >  return (0, _UpdateUserByIdCommand.updateUserByIdCommand)(sanitizationChecksOfInputs(payload)).then(<span class="fstat-no" title="function not covered" >function (result) {</span></span>
+<span class="cstat-no" title="statement not covered" >    return result;</span>
+  }).catch(<span class="fstat-no" title="function not covered" >function (e) {</span>
+<span class="cstat-no" title="statement not covered" >    throw e;</span>
+  });
+};
+&nbsp;
+var deleteUserById = exports.deleteUserById = <span class="fstat-no" title="function not covered" >function deleteUserById(payload) {</span>
+<span class="cstat-no" title="statement not covered" >  return (0, _DeleteUserByIdCommand.deleteUserByIdCommand)(sanitizationChecksOfInputs(payload)).then(<span class="fstat-no" title="function not covered" >function (result) {</span></span>
+<span class="cstat-no" title="statement not covered" >    return result;</span>
+  }).catch(<span class="fstat-no" title="function not covered" >function (e) {</span>
+<span class="cstat-no" title="statement not covered" >    throw e;</span>
+  });
+};</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Mar 19 2018 20:31:01 GMT+0000 (GMT Standard Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

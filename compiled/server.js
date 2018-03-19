@@ -1,5 +1,9 @@
 'use strict';
 
+var _keys = require('babel-runtime/core-js/object/keys');
+
+var _keys2 = _interopRequireDefault(_keys);
+
 var _express = require('express');
 
 var _express2 = _interopRequireDefault(_express);
@@ -34,6 +38,7 @@ describe('Create an Express server', function () {
   it('a server should be listening on port 3000', function (done) {
     // Create express app
     var app = (0, _express2.default)();
+
     // Specify port to listen on
     var PORT = process.env.PORT || 3000;
 
@@ -54,7 +59,7 @@ describe('Create an Express server', function () {
       var ifaces = os.networkInterfaces();
 
       // Iterate through key values of network interfaces
-      Object.keys(ifaces).forEach(function (ifname) {
+      (0, _keys2.default)(ifaces).forEach(function (ifname) {
         var alias = 0;
 
         // Loop through interface names
@@ -73,6 +78,10 @@ describe('Create an Express server', function () {
           ++alias;
         });
       });
+
+      expect(PORT).to.be.eql(3000);
+
+      done();
     });
   });
 });
