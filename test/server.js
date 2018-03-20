@@ -1,4 +1,6 @@
 /* global describe it */
+import chai from 'chai'
+// Test modules
 import express from 'express'
 import routes from './src/routes'
 import bodyParser from 'body-parser'
@@ -6,7 +8,6 @@ import './src/util/db'
 import cors from 'cors'
 import http from 'http'
 
-let chai = require('chai')
 const expect = chai.expect
 
 describe('Create an Express server', function () {
